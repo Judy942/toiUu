@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"> <!-- Nền FrameLayout -->
+
+    <!-- Lớp nền không cần thiết -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/light_grey"> <!-- Nền thừa -->
+
+        <!-- ImageView chính -->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_launcher_background"
+            android:background="@color/white" /> <!-- Nền chồng lên ảnh -->
+
+        <!-- RelativeLayout với nền không cần thiết -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"> <!-- Nền thừa -->
+
+            <TextView
+                android:id="@+id/itemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_grey"
+                android:text="Item Title"
+                android:padding="8dp"
+                />
+
+            <ImageView
+                android:id="@+id/titleIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:layout_alignTop="@id/itemTitle"
+                android:layout_alignBottom="@id/itemTitle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:background="@color/red" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/itemDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemTitle"
+                android:text="Description"
+                android:padding="8dp"
+                android:background="@color/light_slate_gray" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>
